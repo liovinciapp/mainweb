@@ -1,0 +1,541 @@
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+  <meta content="utf-8" http-equiv="encoding"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!-- liovinci followed by project title
+    <title>liovinci - {{project.company}}</title>-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <link href="/company/css/client.css" rel="stylesheet"/>
+  <link href="/company/css/jquery-ui.css" rel="stylesheet"/>
+    <!-- fav and touch icons
+    <link rel="shortcut icon" href="/i/img/favicon.ico"/>
+    <link rel="icon" type="image/png" href="/i/img/favicon-32.png"/>-->
+  </head>
+  <body>
+    
+    <!-- / use this in jade then can access in js files below it-->
+  
+    <div id="ultimate-container" >
+
+
+
+
+        <!-- menu sidebar-->
+      <nav class="navbar sidebar navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <!-- brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+              <span class="sr-only">toggle navigation</span>
+              <!--for showing the three lines in the navigation bar -->
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">
+              <img src="/company/img/liovinci-logo.png" class="logo-resize">
+            </div>
+            <div>
+              <img src="/company/img/liovinci-logo-icon.png" class="logo-icon-resize">
+            </div>
+            <div class="below-logo">
+              <p id="menu-company">  </p>
+              <p id="menu-projects-count">  </p>
+            </div>
+          </div>
+          <!-- collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active menu-proj" onclick="ga('send','event','sidebar','/dashboard')" ><a class="nav-a menu-item" href="#">PROJECTS<img class="resize-menu-ic" src="/company/img/projects_icon.png"/> </a></li>
+              <li class="menu-add" onclick="ga('send','event','sidebar','/addProject')"><a class="nav-a menu-item" href="#">ADD PROJECT<img class="resize-menu-ic" src="/company/img/ic_add_circle_2x.png"/></a></li>
+
+              </ul>
+              <div class="contact-support">
+                <p>Support:  </p>
+                <p>csupport@liovinci.com  </p>
+              </div>
+              <ul id="logout-sidebar" class="nav navbar-nav ">
+                <a id="logout" class="nav-a" href="#" onclick="ga('send','event','sidebar','/addProject')">LOG OUT<span style="font-size:16px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-log-out logout-icon"></span></a>
+                
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--END Menu Sidebar-->
+
+        <div id="main-wrap" class="main">
+          
+          <div id="container-projects-view">
+
+            <div data-index="0" class="separate-proj">
+             <div data-id="" class="col-md-8 proj-body">
+                <div class="panel panel-default">
+                   <div class="panel-body proj-panel">
+                      <div class="row">
+                         <div class="col-md-6"></div>
+                         <div class="col-md-6"><button class="pull-right project-btn-border edit-project-view" onclick="ga('send','event','projects','/editproject')"> EDIT <span style="font-size:16px; margin-right: 5px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-pencil"></span></button><a href="" target="_blank" class="pull-right project-btn-border view-proj-profile" onclick="ga('send','event','projects','/viewprofile')"> VIEW PROFILE <span style="font-size:16px; margin-right: 5px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-globe"></span></a></div>
+                      </div>
+                      <div class="row proj-first">
+                         <p class="proj-title"></p>
+                         <div class="col-md-6 col-xs-12">
+                            <p class="descr-height"> </p>
+                            <div class="row">
+                               <p class="hashtag-field"> HASHTAGS </p>
+                               <p class="hashtags-list"></p>
+                            </div>
+                            <hr>
+                            <div class="row">
+                               <p> <span class="release-field"> RELEASE DATE: </span> <span class="release-date"> </span></p>
+                            </div>
+                            <div class="row stats-header">
+                               <p class="stats-number"><img class="stats-icon" src="/company/img/viewer-icon.png"><span class="stats-trackers"> </span></p>
+                            </div>
+                            <div class="row stats-header">
+                               <p class="stats-number"><img class="stats-phases-icon" src="/company/img/phases-icon.png"> <span class="stats-phases"> </span></p>
+                            </div>
+                            <div class="row stats-header">
+                               <p class="stats-number"><img class="stats-icon" src="/company/img/comment-icon.png"> <span class="stats-comments"> </span></p>
+                            </div>
+                         </div>
+                         <div class="col-md-6 col-xs-12 project-pictures">
+
+                            <div class="row proj-def-pic-height">
+                              <img class="img-responsive img-center proj-default-image" src="" alt="...">
+                            </div>
+                            <div class="row">
+                              <div class="col-xs-12 extra-proj-pics" style="display: block;">
+                                
+
+
+
+
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-md-4 phase-body">
+                <div class="row match-project">
+                  
+                <section id="cd-timeline" class="cd-container"></section>
+                      
+                </div>
+                <div id="add-phase-btn" class="row">
+                   <div id="add-phase-btn" class="row">
+                      <div class="add-phase-center"><span class="add-phase-border"> add phase </span></div>
+                   </div>
+                </div>
+             </div>
+             <div class="hero-extra-text">
+          
+                <span class="down-arrow" onclick="ga('send','event','projects','/nextproject')"><img class="img-down-arrow" src="/company/img/liovinci-arrow.png" /></span>
+
+            </div>
+          </div>
+           
+          </div>  <!--end of proj view-->
+
+
+
+
+
+
+
+
+          <div id="container-edit-project-view">
+               <div class="separate-proj">
+                  <div class="col-md-8 proj-body">
+                     <div class="panel panel-default">
+                        <div class="panel-body proj-panel">
+                           <div class="row">
+                              <div class="col-md-6"></div>
+                              <div class="col-md-6"><a href="" target="_blank" onclick="ga('send','event','projects','/viewprofile2')"class="pull-right project-btn-border view-proj-profile"> VIEW PROFILE <span style="font-size:16px; margin-right: 5px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-globe"></span></a></div>
+                           </div>
+                           <div class="row proj-first">
+                              <p class="proj-title"></p>
+                              <div class="col-md-6 col-xs-12">
+                                 <textarea id="edit-description" class="edit-descr-height"></textarea>
+                                 <div class="row">
+                                    <p class="hashtag-field"> HASHTAGS </p>
+                                    <p class="hashtags-list"></p>
+                                    <div></div>
+                                 </div>
+                                 <form class="form-inline" role="form">
+                                    <div class="form-group has-feedback"><label class="tags-color-label">Add tags:   </label><input id="edit-hashtag" type="text" class="form-control" placeholder="#tag#tag2#tag3"></div>
+                                 </form>
+                                 <hr>
+                                 <div class="row">
+                                    <p> <span class="release-field"> RELEASE DATE: </span> <input id="edit-release-date" type="text" value=""></p>
+                                 </div>
+                              </div>
+
+                              <div class="col-md-6 col-xs-12 project-pictures">
+                                 <img class="img-responsive img-center proj-default-image" src="" alt="...">
+
+                                 <div class="row edit-extra-proj-pics">
+
+                                  <div class="edit-proj-first-image text-center" onclick="ga('send','event','projects','/addpic')">
+                                    <img class="img-responsive img-center first-image" src="/company/img/default-proj-pic.png" alt="...">
+                                   <p class="edit-proj-picture"><span class="">Add New Pic</span></p>
+                                  </div>
+
+                                  
+
+                                     
+                                 </div>
+
+                                 <div class="text-center">
+                                   <p class="validation-error"></p>
+                                 </div>
+                                 <div class="row"><button class="edit-btn-border edit-btn edit-proj-cancel" onclick="ga('send','event','projects','/cancel')"> CANCEL</button><button class="edit-btn-border edit-btn edit-proj-save" onclick="ga('send','event','projects','/save')"> SAVE</button></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 phase-body">
+                     <div class="row match-project">
+                        <section id="cd-timeline2" class="cd-container">
+                           
+                        </section>
+                     </div>
+                     <div id="add-phase-btn" class="row">
+                        <div id="add-phase-btn" class="row">
+                           <div class="add-phase-center"><span class="add-phase-border"> add phase </span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+
+
+
+
+          <div id="container-add-project-view">
+               <div class="separate-proj">
+                  <div class="col-md-12 add-proj-body">
+                     <div class="panel panel-default">
+                        <div class="panel-body proj-panel">
+                           <div class="row">
+                              <div class="col-md-6 col-xs-12">
+                                 <input id="new-proj-title" type="text" placeholder="Project Title" />
+                              
+                              </div>
+                           </div>
+                           <div class="row proj-first">
+                             <div class="col-md-6 col-xs-12">
+                                <div class="row add-proj-row">
+                                 <textarea id="new-proj-descr" placeholder="Project Description..."></textarea>
+                                </div> 
+
+                                 
+                                 <div class="row add-proj-row">
+                                  <span class="tag-field">ADD TAGS:</span><input id="new-proj-hashtag" type="text"  placeholder="#projectitle#company#tag3#tag4">
+                                 </div>
+                              
+                                 <div class="row add-proj-row">
+                                    <span class="release-field"> RELEASE DATE: </span> <input id="new-release-date" type="text" placeholder="i.e. July 28, 2016 or TBA (optional)" value="">
+                                 </div>
+                              </div>
+
+                              <div class="col-md-6 col-xs-12 project-pictures">
+
+                            <div class="row proj-def-pic-height">
+                                 <img id="add-proj-image" class="img-responsive" src="/company/img/default-proj-pic.png" alt="..." />
+                                 </div>
+                                    <!-- File Button-->
+                                    <div class="row form-group">
+                                      <div class="control-group">
+                                        <label for="filebutton" class="control-label"></label>
+                                        <div class="controls text-center">
+                                          <input id="add-phase-filebutton" type="file" class="input-file"  onchange="document.getElementById('add-proj-image').src = window.URL.createObjectURL(this.files[0])" onclick="ga('send','event','addproject','/choosefile')"/>
+                                          <p class="image-size-note">(Images should be 640x480 pixels in dimension)</p>
+                                        </div>
+                                      </div>
+                                    </div> <!-- end file upload -->
+                                  <hr>
+                                  
+                                     
+                                 </div>
+                                 <div class="text-center">
+                                   <p class="validation-error"></p>
+                                 </div>
+                                 <div class="row add-btn-row pull-right"><button class="add-btn-border add-btn add-proj-clear" onclick="ga('send','event','addproject','/clear')"> CLEAR</button><button class="add-btn-border add-btn add-proj-save" onclick="ga('send','event','addproject','/save')"> SAVE</button></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                
+               </div>
+            </div>
+
+
+
+            <div id="loading"></div>
+
+
+
+
+
+
+
+
+
+
+          </div> <!--Main -->
+
+
+
+
+<!-- ERROR  MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+      <div id="errormodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center"> 
+              <span class="error-title"> Error</span>
+              <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div class="modal-body text-center">
+               <p id="error-message"> </p>
+              <button id="confirm-error" class="btn btn-danger">Ok</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- REMOVE PHASE  MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+        <div id="removephasemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="remove-phase-title"> </span>
+              <button type="button" data-dismiss="modal" class="close" onclick="ga('send','event','projects','/exitremovephase')"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div class="modal-body">
+                  
+               <p>Are you sure you want to remove this phase? </p>
+                <hr>
+              <button class="btn btn-warning confirm-remove-phase" onclick="ga('send','event','phases','/removephase')">Yes</button>
+              <button class="btn btn-danger cancel-remove-phase" onclick="ga('send','event','projects','/cancelremovephase')">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  <!-- UPLOAD IMAGE MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+      <div id="uploadimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="proj-img-title"> </span>
+              <button type="button" data-dismiss="modal" class="close" onclick="ga('send','event','projects','/exitnewimgproj')"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div class="modal-body text-center">
+                <img id="uploaded-proj-image" class="img-responsive" src="/company/img/default-proj-pic.png" alt="..." />
+                <!-- File Button-->
+                <div class="row form-group">
+                  <div class="control-group">
+                    <label for="filebutton" class="control-label">New Picture</label>
+                    <div class="controls">
+                      <input id="uploaded-proj-filebutton" type="file" class="input-file"  onchange="document.getElementById('uploaded-proj-image').src = window.URL.createObjectURL(this.files[0])" onclick="ga('send','event','projects','/choosenewimgproj')"/>
+                    </div>
+                  </div>
+                </div> <!-- end file upload -->
+                <hr>
+                <div class="text-center">
+                <p class="validation-error"></p>
+              </div>
+              <button class="btn btn-warning confirm-edit-proj-upload" onclick="ga('send','event','projects','/savenewimgproj')">Upload</button>
+              <button class="btn btn-danger cancel-edit-proj-upload" onclick="ga('send','event','projects','/cancelnewimgproj')">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ <!-- Proj Options Image MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+      <div id="projimageoptionsmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="proj-img-title"> </span>
+              <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true" onclick="ga('send','event','projects','/exitprojimgoptions')">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div class="modal-body text-center">
+                <img id="extra-options-image" class="img-responsive" src="/company/img/default-proj-pic.png" alt="..." />
+               
+                <hr>
+                
+              <button class="btn btn-primary confirm-set-default" onclick="ga('send','event','projects','/defaultprojimgoptions')">Set As Default</button>
+              <button class="btn btn-danger confirm-remove-proj-image" onclick="ga('send','event','projects','/removeprojimgoptions')">Remove Image</button>
+              <button class="btn btn-warning cancel-proj-image-options" onclick="ga('send','event','projects','/cancelprojimgoptions')">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+  <!-- UPLOAD IMAGE MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+      <div id="uploadphaseimagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="proj-img-title"> </span>
+              <button type="button" data-dismiss="modal" class="close" onclick="ga('send','event','phases','/exitphasenewimg')"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div id="upload-phase-id" data-id="" class="modal-body text-center">
+                <img id="upload-phase-image" class="img-responsive" src="/company/img/default-proj-pic.png" alt="..." />
+                <!-- File Button-->
+                <div class="row form-group">
+                  <div class="control-group">
+                    <label for="filebutton" class="control-label">Phase Picture</label>
+                    <div class="controls">
+                      <input id="upload-phase-filebutton" type="file" class="input-file"  onchange="document.getElementById('upload-phase-image').src = window.URL.createObjectURL(this.files[0])" onclick="ga('send','event','phases','/choosephasenewimg')"/>
+
+                      <p class="image-size-note">(Must be 400x300 pixels in dimension)</p>
+                    </div>
+                  </div>
+                </div> <!-- end file upload -->
+                <hr>
+                <div class="text-center">
+                <p class="validation-error"></p>
+              </div>
+              <button class="btn btn-warning confirm-update-ph-pic" onclick="ga('send','event','phases','/savephasenewimg')">Update Picture</button>
+              <button class="btn btn-danger cancel-update-ph-pic" onclick="ga('send','event','phases','/cancelphasenewimg')">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+<!-- Add PHASE  MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+      <div id="addphasemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="proj-img-title"> </span>
+              <button type="button" data-dismiss="modal" class="close" onclick="ga('send','event','phases','/exitaddphase')"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12">
+         
+              <div class="row form-group">
+                <div class="row form-group margin-phase">
+                  <input id="new-phase-title" type="text" placeholder="Phase Title" maxlength="30" class="pull-left"/>
+
+                  <!-- Datepicker-->
+                  <div class="pull-right">  
+                    <input id="new-phase-datepicker" type="text" name="phase-date" placeholder="Phase Date" class="date-on-top pull-right"/>
+                  </div>
+             
+                  </div>
+                    <p class="pull-left counter-title2 margin-phase">Characters left: 30</p>
+
+                
+              </div>
+              <div class="row form-group margin-phase">
+                <div class="input-group col-xs-12">
+                  <textarea id="new-phase-text" rows="4" maxlength="300" placeholder="Phase Description... (Max 300 characters)" class="no-resize description-box"></textarea>
+                  <p class="counter-text2">Characters left: 300</p>
+                </div>
+              </div>
+             
+              
+             <img id="add-phase-image" class="img-responsive" src="/company/img/default-proj-pic.png" alt="..." />
+                <!-- File Button-->
+                <div class="row form-group">
+                  <div class="control-group">
+                    <label for="filebutton" class="control-label"></label>
+                    <div class="controls text-center">
+                      <input id="add-phase-filebutton" type="file" class="input-file"  onchange="document.getElementById('add-phase-image').src = window.URL.createObjectURL(this.files[0])" onclick="ga('send','event','phases','/chooseaddphaseimg')"/>
+                      <p class="image-size-note">(Must be 400x300 pixels in dimension)</p>
+                    </div>
+                  </div>
+                </div> <!-- end file upload -->
+              <hr>
+              </div>
+              <div class="text-center">
+                <p class="validation-error"></p>
+              </div>
+              <div class="row form-group add-phase-buttons">
+                <button class="btn btn-primary clear-new-phase" onclick="ga('send','event','phases','/clearaddphase')">Clear</button>
+                <button class="btn btn-primary cancel-new-phase" onclick="ga('send','event','phases','/canceladdphase')">Cancel</button>
+                <button class="btn btn-primary submit-new-phase" onclick="ga('send','event','phases','/saveaddphase')">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- LOGOUT  MODAL-->
+      <!-- Creates the bootstrap modal where the image will appear-->
+      <div id="logoutmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <span class="logout-title">Logout </span>
+              <button type="button" data-dismiss="modal" class="close"><span aria-hidden="true" onclick="ga('send','event','sidebar','/exitlogout')">×</span><span class="sr-only">Close</span></button> 
+            </div>
+            <div class="modal-body text-center">
+               <p>Are you sure you want to Log Out?</p>
+
+              
+                <hr>
+              <button class="btn btn-warning confirm-logout" onclick="ga('send','event','sidebar','/confirmlogout')">Yes</button>
+              <button class="btn btn-danger cancel-logout" onclick="ga('send','event','sidebar','/cancellogout')">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+            <div><div><div id="secret-info" data-info="{{ json projects }}"></div></div></div>
+            </div><!-- end single page-->
+
+
+
+            <script src="/company/js/jquery-2.2.1.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/company/js/js.cookie.js"></script>
+    <script src="/company/js/jquery-ui.js"></script>
+            <script src="/company/js/cdashboard.js"></script>
+            <!-- begin urips analytics code-->
+            <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-79954530-1', 'auto');
+              ga('send', 'pageview');
+
+            </script>
+          </body>
+          </html>

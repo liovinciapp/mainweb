@@ -1,0 +1,110 @@
+body {
+     background: #0e90d8 !important; /* For browsers that do not support gradients */    
+    text-align: center;/* For browsers that do not support gradients */
+    color: #ffffff;  
+}
+
+
+@font-face {
+    font-family: 'lato-bold'; /*a name to be used later*/
+    src: url('fonts/Lato-Bold.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'lato-regular'; /*a name to be used later*/
+    src: url('fonts/Lato-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'lato-italic'; /*a name to be used later*/
+    src: url('fonts/Lato-Italic.ttf'); /*URL to font*/
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-mods {
+     margin-top: 60px !important;
+    text-align: center;
+
+}
+   
+.logo-words-resize {
+    max-width: 120px;
+    margin-bottom: 50px;
+}
+
+.logo-icon-resize {
+    max-width: 70px;
+}
+
+.login-field  {
+    margin-top: 20px;
+    width: 300px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    border: .8px solid #ffffff; /*used to remove gray border for some reason */
+    color: #9e9e9e;
+    font-size: 14px;
+    font-family: 'lato-bold';
+}
+
+.login-info {
+    margin: 0 auto;
+    max-width: 300px;
+    color: #fcfcfc;
+    font-size: 20px;
+    font-family: 'lato-regular';
+    text-align: center;
+}
+
+#loginSubmit {
+    margin-top: 60px;
+    width: 140px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+     border-radius: 20px; /* change to a higher px to make more round */
+    border: .8px solid #ffffff;
+    font-size: 12px;
+    font-family: 'lato-regular';
+    color: #fcfcfc
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.forgotpw {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'lato-regular';
+
+}
+.forgotpw:link {
+    color:#ffffff;
+    text-decoration: none;
+} 
+
+.forgotpw:hover {
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.forgotpw:active {
+    color:#ffffff;
+    text-decoration: none;
+}
+.forgotpw:visited {
+    color:#ffffff;
+    text-decoration: none;
+} 
+
+.forgotp {
+    margin-top: 20px !important;
+}

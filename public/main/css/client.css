@@ -1,0 +1,1647 @@
+
+
+    body,html{
+        height: 100%;
+    }
+
+@font-face {
+    font-family: 'lato-bold'; /*a name to be used later*/
+    src: url('fonts/Lato-Bold.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'lato-regular'; /*a name to be used later*/
+    src: url('fonts/Lato-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'lato-italic'; /*a name to be used later*/
+    src: url('fonts/Lato-Italic.ttf'); /*URL to font*/
+}
+
+    /* remove outer padding */
+    .main .row{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /*Remove rounded coners*/
+
+    nav.sidebar.navbar {
+        border-radius: 0px;
+    }
+
+    nav.sidebar, .main{
+        -webkit-transition: margin 200ms ease-out;
+        -moz-transition: margin 200ms ease-out;
+        -o-transition: margin 200ms ease-out;
+        transition: margin 200ms ease-out;
+    }
+
+    /* Add gap to nav and right windows.*/
+    .main{
+        padding: 10px 10px 0 10px;
+    }
+
+    /* .....NavBar: Icon only with coloring/layout.....*/
+
+    /*small/medium side display*/
+    @media (min-width: 992px) {
+
+        /*Allow main to be next to Nav*/
+        .main{
+            position: absolute;
+            width: calc(100% - 40px); /*keeps 100% minus nav size*/
+            margin-left: 40px;
+            float: right;
+        }
+
+        /*lets nav bar to be showed on mouseover*/
+        nav.sidebar:hover + .main{
+            margin-left: 200px;
+        }
+
+        /*Center Brand*/
+        nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+            margin-left: 0px;
+        }
+        /*Center Brand*/
+        nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+            text-align: center;
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        /*Center Icons*/
+        nav.sidebar a{
+            padding-right: 13px;
+        }
+
+        /*adds border top to first nav box */
+        nav.sidebar .navbar-nav > li:first-child{
+            border-top: 1px #e5e5e5 solid;
+        }
+
+        /*adds border to bottom nav boxes*/
+        nav.sidebar .navbar-nav > li{
+            border-bottom: 1px #e5e5e5 solid;
+        }
+
+        /* Colors/style dropdown box*/
+        nav.sidebar .navbar-nav .open .dropdown-menu {
+            position: static;
+            float: none;
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        /*allows nav box to use 100% width*/
+        nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+            padding: 0 0px 0 0px;
+        }
+
+        /*colors dropdown box text */
+        .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+            color: #777;
+        }
+
+        /*gives sidebar width/height*/
+        nav.sidebar{
+            width: 200px;
+            height: 100%;
+            margin-left: -160px;
+            float: left;
+            z-index: 8000;
+            margin-bottom: 0px;
+        }
+
+        /*give sidebar 100% width;*/
+        nav.sidebar li {
+            width: 100%;
+        }
+
+        /* Move nav to full on mouse over*/
+      /*TODO ADD BELOW after the  class to have it hide :hover*/
+        nav.sidebar:hover{
+            margin-left: 0px;
+        }
+        /*for hiden things when navbar hidden*/
+        .forAnimate{
+            opacity: 0;
+        }
+    }
+
+    /* .....NavBar: Fully showing nav bar..... */
+
+    @media (min-width: 1330px) {
+
+        /*Allow main to be next to Nav*/
+        .main{
+            width: calc(100% - 200px); /*keeps 100% minus nav size*/
+            margin-left: 200px;
+        }
+
+        /*Show all nav*/
+        nav.sidebar{
+            margin-left: 0px;
+            float: left;
+        }
+        /*Show hidden items on nav*/
+        nav.sidebar .forAnimate{
+            opacity: 1;
+        }
+    }
+
+    nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #CCC;
+        background-color: transparent;
+    }
+
+    nav:hover .forAnimate{
+        opacity: 1;
+    }
+    section{
+        padding-left: 15px;
+    }
+
+
+.sidebar {
+     background: #0e90d8 !important; /* For browsers that do not support gradients */    
+   
+    text-align: center;
+}
+.navbar-brand {
+  margin-top: 70px !important;
+    height: 40px;
+}
+
+.navbar-header {
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.icon-bar{
+    background-color: #ffffff;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+
+/*  This is to have the nav list items go across the whole sidebar have to set float to none*/
+@media (min-width: 992px){
+  .logo-resize {
+      visibility: visible;
+    position: absolute;
+    top: 3px;
+    margin-top: 65px;
+    width: 70px;
+    max-width: 200% !important;
+
+    /* for centering */
+    left: 50%;
+    margin-left: -35px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+
+.navbar-nav {
+    float: none !important; 
+
+}
+/* so it is included in collapse correctly */
+#logout-sidebar {
+    position: absolute;
+    display: inline-block;
+    bottom: 20;
+    left: 35px;
+    color: #ffffff;
+
+}
+
+.below-logo {
+     
+    text-align: center;
+    margin-top: 20px;
+}
+}
+
+/*Change text color on rollover*/
+.navbar .brand, .navbar .nav > li > a:hover {
+
+    color: #fff;
+}
+
+
+/*Change rollover cell color here*/
+ .nav > li > a:hover,
+ .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #0b507f; 
+  }
+
+
+.nav-a {
+    color: #fff;
+    font-family: "lato-regular"
+    font-size: 16px;
+}
+
+.nav-a:visited  {
+    color: #fff;
+}
+
+
+.nav-a:active {
+    color: #fff;
+}
+
+.logout-icon {
+    margin-right: 20px;
+}
+
+#menu-company {
+  font-family: 'lato-bold';
+  font-size: 24px;
+}
+
+#menu-projects-count {
+font-family: 'lato-italic';
+  font-size: 16px;
+}
+
+
+.resize-menu-ic {
+    float: right;
+    max-height: 20px;
+    max-width: 20px;
+}
+.contact-support {
+  margin-top: 20px;
+    font-size: 14px;
+    font-family: 'lato-regular';
+    color: #ffffff;
+}
+
+/*  This is to have the nav list items go across the whole sidebar have to set float to none*/
+@media (max-width: 992px){
+
+  .logo-resize {
+      visibility: visible;
+    position: absolute;
+    top: 3px;
+    margin-top: 15px;
+    width: 70px;
+    max-width: 200% !important;
+
+    /* for centering */
+    left: 50%;
+    margin-left: -20px !important;  /* 50% of your logo width */
+    display: block;
+}
+
+
+.logo-icon-resize {
+    display: none;
+
+}
+
+.below-logo {
+     
+    text-align: center;
+    margin-top: 50px;
+}
+
+.main {
+    margin-top: 150px;
+}
+
+
+}
+
+
+.validation-error{
+      font-size: 14px;
+    font-family: 'lato-regular';
+    color: #FF0000;
+}
+
+
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("http://liovincis.com/company/img/liovinci-loading-web.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* ////////////////// PROJECT DETAILS //////////// */
+@media (min-width: 992px){
+.separate-proj {
+  margin-top: 10px;
+    height: 100%;
+}
+
+.proj-body {
+
+    height: 100%;
+}
+.phase-body {
+
+    height: 100%;
+}
+.proj-panel {
+
+    height: 90%;
+}
+}
+
+#container-projects-view {
+}
+
+.project-btn-border {
+  margin-top: 10px;
+  margin-left: 10px;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 10px;
+    border-radius: 16px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 12px;
+    font-family: 'lato-regular';
+    color: #adadad;
+    background-color: #fbfbfb;
+    text-decoration: none;
+}
+
+
+.project-btn-border:hover {
+    color: #ffffff;
+    background-color: #2d9fe2;
+    text-decoration: none;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+.project-btn-border:active {
+    text-decoration: none;
+}
+.project-btn-border:visited {
+    text-decoration: none;
+}
+.project-pictures {
+    text-align: center;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+.proj-title {
+  margin-top: 30px;
+    margin-left: 15px;
+   font-family: 'lato-bold';
+    color: #2d9fe2;
+    font-size: 24px;
+}
+@media (min-width: 992px){
+  .descr-height {
+    height: 500px;
+    
+}
+  .edit-descr-height {
+    height: 500px;
+    
+}
+
+}
+
+ .edit-descr-height {
+     width: 100%;
+    overflow-y: auto;
+    font-family: 'lato-regular';
+    color: #8c8c8c;
+    font-size: 18px;
+     border-radius: 16px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    padding: 10px;
+}
+.descr-height {
+  width: 100%;
+    overflow-y: auto;
+    font-family: 'lato-regular';
+    color: #8c8c8c;
+    font-size: 18px;
+    
+}
+
+.proj-other-info {
+  margin-top: -100px;
+}
+
+.release-date {
+  margin-top: 10px;
+  width: 100%;
+font-family: 'lato-bold';
+    color: #b9b8b8;
+    font-size: 16px;
+}
+
+.release-field {
+  font-family: 'lato-bold';
+    color: #868686;
+    font-size: 16px;
+   
+}
+
+
+
+
+#container-project-hashtags {
+    background-color: #fdfdfd;
+}
+
+
+/* for smaller screens */
+@media (max-width: 700px) {
+   #project-hashtags {
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width:  364px; 
+    }
+
+
+}
+
+/* for bigger screens */
+@media (min-width: 701px) {
+   
+    #project-hashtags {
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width:  500px; 
+    }
+
+}
+.proj-first {
+  height: 65%;
+}
+@media (min-width: 992px) {
+   
+.proj-def-pic-height {
+  height: 500px;
+}
+}
+.hashtag-field {
+  margin-top: 50px;
+    font-size: 12px;
+    font-family: 'lato-bold';
+    color: #c3c3c3
+}
+.hashtag {
+    margin-right: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 16px; /* change to a higher px to make more round */
+    float: left;
+    border: .8px solid #bfbfbf;
+    font-size: 14px;
+    font-family: 'lato-regular';
+    color: #969696
+}
+
+.stats-header {
+  margin-top: 5px !important;
+}
+
+
+@media (max-width: 1440px) {
+  .stats-header {
+  margin-top: -10px !important;
+}
+
+
+.release-date {
+  margin-top: -10px;
+    font-size: 14px;
+}
+
+.release-field {
+    font-size: 14px;
+   
+}
+.tag-field {
+    font-size: 14px;
+   
+}
+
+
+}
+
+
+.stats-number {
+  font-family: 'lato-bold';
+    color: #868686;
+    font-size: 16px;
+}
+
+.stats-icon {
+  max-width: 24px;
+  margin-right: 10px;
+}
+.stats-phases-icon {
+  margin-left: 2px;
+  max-width: 20px;
+  margin-right: 10px;
+}
+.extra-proj-pics {
+  margin-top: 30px;
+}
+
+.img-extra-proj  {
+}
+
+/*used to keep date box on top of other fields  on pop up */
+.date-on-top {
+    position: relative; z-index: 100000;
+}
+
+.edit-phase{
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+    background-color: #0b507f;
+    text-align: center;
+    line-height:40px;
+    font-size: 14px;
+
+    font-family: 'lato-regular';
+}
+.remove-phase{
+  margin-top: 15px;
+  width: 100%;
+  height: 30px;
+  color: #ffffff;
+    background-color: #FF0000;
+    text-align: center;
+    line-height:40px;
+    font-size: 12px;
+
+    font-family: 'lato-regular';
+}
+.remove-phase:hover{
+    background-color: #8A0707;
+    cursor: pointer; 
+    cursor: hand;
+}
+
+#error-message {
+  
+    text-align: center;
+    font-size: 18px;
+    font-family: 'lato-regular';
+    color: #8A0707;
+}
+.error-title {
+  width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'lato-bold';
+    color: #8A0707;
+}
+
+#confirm-error{
+  margin: 0 auto;
+}
+
+.edit-phase-pic-remove{
+
+  margin: 5px;
+  font-size: 2.2em;
+  color: #ff0000;
+}
+
+.edit-phase-pic-remove:hover{
+
+  margin: 5px;
+  font-size: 2.2em;
+  color: #FE5000;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+
+
+.edit-phase-cam {
+  margin: 5px;
+  font-size: 2.2em;
+}
+
+
+.edit-phase-cam:hover {
+  margin: 5px;
+  color: #0e90d8;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+
+
+.hero-extra-text {
+    clear: both;
+     width: 300px; 
+       color: #fff;
+    text-align: center;
+      margin: 0 auto;
+}
+.img-down-arrow {
+    max-width: 50px;
+    max-height: 50px;
+    cursor: pointer; 
+    cursor: hand;
+    
+}
+
+@media (max-width: 991px) {
+
+.img-down-arrow {
+   
+    bottom: 0;
+    margin-bottom: 20px;
+}
+}
+@media (min-width: 992px) {
+
+
+.img-down-arrow {
+    bottom: 0;
+}
+
+}
+
+.edit-extra-proj-pics{
+  margin-top: 20px !important;
+  margin-bottom: 50px !important;
+  overflow-x: auto;
+  height: 200px;
+}
+
+.proj-add-image{
+  width: 45%;
+  margin-left: 10px;
+  float: left;
+}
+
+.edit-proj-first-image {
+  opacity: 0.5;
+  width: 45%;
+  margin-left: 10px;
+  float: left;
+    position:relative;
+    display:inline-block;
+    text-align: center;
+}
+
+.first-image-cam {
+  position:absolute;
+    bottom:10px;
+    right:10px;
+    width:100px;
+    height:30px;
+}
+/*///////////////PROJECT ADD ///////////////*/
+
+
+.add-proj-body {
+
+    height: 100%;
+}
+
+#new-proj-title {
+   padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 12px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #868686;
+    background-color: #fbfbfb;
+}
+
+#new-proj-hashtag {
+  margin-top: 5px;
+  margin-bottom: 5px;
+     padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 14px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #868686;
+    background-color: #fbfbfb;
+    width: 100%;
+}
+
+#new-release-date{
+  width: 100%;
+  padding: 5px;
+   margin-left: 10px;
+   margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 12px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #868686;
+    background-color: #fbfbfb;
+}
+
+@media (min-width: 992px){
+  #new-proj-descr {
+    height: 500px;
+    
+}
+ 
+.add-btn-row{
+  margin-top: 50px;
+}
+
+}
+
+ #new-proj-descr {
+     width: 100%;
+    overflow-y: auto;
+    font-family: 'lato-regular';
+    color: #8c8c8c;
+    font-size: 18px;
+     border-radius: 16px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    padding: 10px;
+}
+
+.tag-field{
+font-family: 'lato-bold';
+    color: #868686;
+    font-size: 16px;
+    margin-right: 30px;
+}
+
+.add-proj-row{
+  margin-top: 15px !important;
+}
+
+
+
+.add-btn-border {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 16px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #adadad;
+    background-color: #fbfbfb;
+    text-decoration: none;
+}
+
+
+.add-btn-border:hover {
+    color: #ffffff;
+    background-color: #2d9fe2;
+    text-decoration: none;
+
+    cursor: pointer; 
+    cursor: hand;
+
+}
+
+#add-proj-image {
+  width: 640px;
+}
+
+/*///////////////END PROJECT ADD ///////////////*/
+
+/*/////////////////////EDIT PROJECT////////////// */
+.edit-proj-picture {
+  width: 100%;
+  height: 40px;
+  color: #ffffff;
+    background-color: #0b507f;
+    text-align: center;
+    line-height:40px;
+
+    font-family: 'lato-regular';
+}
+
+
+.edit-proj-pic-remove{
+
+  margin: 5px;
+  font-size: 2.2em;
+  color: #ff0000;
+}
+
+.edit-proj-pic-remove:hover{
+
+  margin: 5px;
+  font-size: 2.2em;
+  color: #FE5000;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+.edit-proj-cam {
+  margin: 5px;
+  font-size: 2.2em;
+}
+
+
+.edit-proj-cam:hover {
+  margin: 5px;
+  color: #0e90d8;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+
+
+
+.edit-btn-border {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 16px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #adadad;
+    background-color: #fbfbfb;
+    text-decoration: none;
+}
+
+
+.edit-btn-border:hover {
+    color: #ffffff;
+    background-color: #2d9fe2;
+    text-decoration: none;
+
+    cursor: pointer; 
+    cursor: hand;
+
+}
+
+#edit-release-date{
+   padding: 5px;
+   margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 12px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #868686;
+    background-color: #fbfbfb;
+}
+
+#edit-hashtag {
+   padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 14px; /* change to a higher px to make more round */
+    border: .8px solid #bfbfbf;
+    font-size: 16px;
+    font-family: 'lato-regular';
+    color: #868686;
+    background-color: #fbfbfb;
+}
+
+.edit-proj-picture-options {
+  display: none;
+}
+
+.proj-img-title {
+  color: #0e90d8;
+    font-size: 20px;
+    font-family: 'lato-bold';
+  text-align: center;
+}
+.tags-color-label {
+
+    font-family: 'lato-regular';
+    color: #868686;
+    margin-right: 10px;
+
+}
+/*///////////////BEGIN IMAGE ///////////////*/
+
+
+.carousel-img {
+  margin-top: 20px;
+  border: .8px solid #f7f7f7;;
+}
+
+
+
+.carousel-indicators li {
+  background-color: #fff !important;
+  background-color: rgba(70,70,70,.45) !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+
+}
+
+.carousel-indicators .active {
+  background-color: #0e90d8 !important;
+}
+
+
+
+    .carousel{
+      width: 240px; 
+      margin: 0 auto;
+    }
+
+    .carousel-inner {
+      margin: 0 auto;
+        height: auto; 
+        width: auto; 
+    }
+
+    /* pushes div below image to move the indicators  320 - 256 -
+   */
+    #carousel-project {
+        height: 290px;
+        overflow: visible;
+    }
+
+     #carousel-project2 {
+        height: 290px;
+        overflow: visible;
+    }
+
+
+    /* centers carousel controllers */
+    .carousel-control img{
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 40px !important;
+        max-height: 250px;
+    }
+    .carousel-control {
+        height: 178px;
+        width: 40px !important;
+        margin-top: 21px; /*-half of diff of height from height  of #carousel-project*/
+
+    }
+
+/*///////////////END IMAGE ///////////////*/
+
+
+
+/* ////////////////// COMMENTS ////////////
+
+.comment-height {
+    max-height: 50%;
+    overflow-y: scroll;
+
+}
+.resize-comment-images {
+    width: 50px;
+    max-width: 200% !important;
+
+}
+
+ */
+/* this allows for the column to not be as wide so the username can be next to it
+width has to be bigger than resize-comment-images*/
+/*.comment-image-col {
+    width: 60px;
+    max-width: 200% !important;
+}
+
+.comment-message {
+     width: 100%;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}
+
+ */
+
+/* -------------------------------- 
+
+PHASE DETAILS:;
+
+-------------------------------- */
+@media (min-width: 992px){
+.match-project {
+    max-height: 700px;
+}
+
+
+#add-phase-btn {
+    height: 50px;
+
+}
+
+#add-phase-btn {
+    width: 100%;
+   background: #0e90d8 !important; 
+
+}
+}
+
+@media (max-width: 992px){
+  #add-phase-btn {
+     margin-top: 20px !important;
+     margin-bottom: 20px;
+
+}
+}
+.match-project {
+    overflow-y: auto;
+}
+
+
+#add-phase-btn {
+    width: 100%;
+     border-radius: 4px;
+     margin-top: 10px;
+   background: #0e90d8 !important; 
+
+}
+.add-phase-border:hover {
+   background: #0b507f !important; 
+
+    cursor: pointer; 
+    cursor: hand;
+
+}
+.add-phase-center {
+  top: 10px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+
+.add-phase-border {
+    padding: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 16px; /* change to a higher px to make more round */
+    border: .8px solid #ffffff;
+    font-size: 18px;
+    font-family: 'lato-regular';
+    color: #ffffff;
+   background: #0e90d8 !important; 
+}
+
+.phase-edit-border {
+   padding: 8px;
+   
+    border-radius: 20px; /* change to a higher px to make more round */
+    border: .4px solid #adadad;
+    font-size: 14px !important;
+    color: #adadad;
+}
+
+.phase-edit-border:hover {
+  color:#ffffff;
+  border: .4px solid #ffffff;
+    background-color: #2d9fe2;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+
+
+.phase-save-border {
+   padding: 8px;
+   
+    border-radius: 20px; /* change to a higher px to make more round */
+    border: .4px solid #adadad;
+    font-size: 14px !important;
+    color: #adadad;
+}
+
+.phase-save-border:hover {
+  color:#ffffff;
+  border: .4px solid #ffffff;
+    background-color: #2d9fe2;
+
+    cursor: pointer; 
+    cursor: hand;
+}
+/* -------------------------------- 
+
+Primary style TIMELINE
+
+-------------------------------- */
+#new-phase-title{
+  border-radius: 10px; /* change to a higher px to make more round */
+    padding: 5px;
+  margin: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+}
+
+.counter-title{
+
+    margin-left: 20px;
+    font-family: 'lato-regular';
+    color: #6c6c6c;
+}
+
+#new-phase-datepicker{
+    border-radius: 10px; /* change to a higher px to make more round */
+    padding: 5px;
+  margin: 10px;
+  width: 140px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+}
+
+
+@media (max-width: 992px){
+ #new-phase-datepicker{
+  float: left;
+}
+
+
+  }
+
+#new-phase-text{
+    border-radius: 10px; /* change to a higher px to make more round */
+    padding: 5px;
+  margin-right: 10px;
+    font-size: 16px;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+    width: 100%;
+    height: 100px;
+}
+.counter-text {
+
+    margin-left: 20px;
+    font-family: 'lato-regular';
+    color: #6c6c6c;
+}
+
+#add-phase-image{
+  width: 400px;
+  margin: 0 auto;
+}
+
+#add-phase-filebutton{
+  padding-top: 10px;
+  border-radius: 10px; /* change to a higher px to make more round */
+    
+    font-size: 14px;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+  margin: 0 auto;
+}
+
+.add-phase-buttons{
+
+  margin: 0 auto;
+    font-family: 'lato-bold';
+    font-size: 14px;
+}
+
+#remove-phase-image{
+
+  width: 400px;
+  margin: 0 auto;
+}
+
+#upload-phase-image {
+
+  width: 400px;
+  margin: 0 auto;
+}
+
+#upload-phase-filebutton, #uploaded-proj-filebutton{
+  padding-top: 10px;
+  border-radius: 10px; /* change to a higher px to make more round */
+    
+    font-size: 14px;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+  margin: 0 auto;
+}
+
+#extra-options-image {
+
+  width: 640px;
+  margin: 0 auto;
+}
+
+#default-proj-image {
+
+  width: 400px;
+  margin: 0 auto;
+}
+.phase-title {
+  margin-top: 30px !important;
+    font-size: 20px !important;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+}
+
+#remove-proj-image{
+
+  width: 400px;
+  margin: 0 auto;
+}
+
+#uploaded-proj-image{
+
+  width: 640px;
+  margin: 0 auto;
+}
+.phase-text {
+    font-size: 14px !important;    
+    font-family: 'lato-regular';
+    color: #6a6a6a;
+}
+
+.phase-date {
+    font-size: 16px !important;
+    font-family: 'lato-bold';
+    color: #7d7d7d;
+}
+
+.edit-phase-options{
+  height: 40px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.edit-phase-title {
+    border-radius: 10px; /* change to a higher px to make more round */
+    padding: 5px;
+  margin-top: 10px !important;
+    font-size: 20px !important;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+  width: 100%;
+    clear:both;
+}
+
+.edit-phase-text {
+    border-radius: 10px; /* change to a higher px to make more round */
+    padding: 5px;
+  margin-top: 10px;
+    font-size: 14px !important;    
+    font-family: 'lato-regular';
+    color: #6a6a6a;
+    height: 100px;
+    width: 100%;
+}
+
+.edit-phase-date {
+  border-radius: 10px; /* change to a higher px to make more round */
+    padding: 5px;
+    font-size: 16px !important;
+    font-family: 'lato-bold';
+    color: #7d7d7d;
+  width: 100%;
+    clear:both;
+}
+
+.image-size-note{
+  margin-top: 10px;
+   font-size: 14px;
+    font-family: 'lato-regular';
+    color: #7d7d7d;
+}
+
+
+
+
+
+
+
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*body {
+  font-size: 100%;
+  font-family: "Droid Serif", serif;
+  color: #7f8c97;
+  background-color: #e9f0f5;
+}
+
+a {
+  color: #acb7c0;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+*/
+
+img {
+  max-width: 100%;
+}
+/*
+h1, h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+*/
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+
+#cd-timeline, #cd-timeline2 {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before , #cd-timeline2::before{
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #d7e4ed;
+}
+
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  /*height: 40px; REMOVED looks cooler */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+/* can make cd-left, or anything these are just showing different for each one */
+.cd-timeline-img.cd-left {
+  background: #0e90d8;
+}
+.cd-timeline-img.cd-right {
+  background: #00c0f0;
+}
+.cd-timeline-img.cd-location {
+  background: #f0ca45;
+}
+
+@-webkit-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: #ffffff;
+  border-radius: 0.25em;
+  padding: 1em;
+  border: solid 0.2px #cacaca;
+}
+.cd-timeline-content::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-timeline-content h2 {
+  color: #303e49;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+.cd-timeline-content .cd-read-more {
+  float: right;
+  padding: .8em 1em;
+  background: #acb7c0;
+  color: #ffffff;
+  border-radius: 0.25em;
+}
+.no-touch .cd-timeline-content .cd-read-more:hover {
+
+
+  background-color: #bac4cb;
+}
+.cd-timeline-content .cd-date {
+  float: left;
+  /*padding: .8em 0; REMOVED so goes to top*/
+  opacity: .7;
+}
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+     top: 0px; /* CHANGED TO 0 from 16 SO I CAN HAVE IT POSTION UP TOP */
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #cacaca;
+}
+@media only screen and (min-width: 992px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+
+
+
+}
+
+

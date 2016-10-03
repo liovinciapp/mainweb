@@ -1,0 +1,1046 @@
+body {
+    background: #f7f7f7 !important; /* For browsers that do not support gradients */    
+    
+}
+
+@font-face {
+    font-family: 'lato-bold'; /*a name to be used later*/
+    src: url('fonts/Lato-Bold.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'lato-regular'; /*a name to be used later*/
+    src: url('fonts/Lato-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'lato-italic'; /*a name to be used later*/
+    src: url('fonts/Lato-Italic.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'liovinci-logo'; /*a name to be used later*/
+    src: url('fonts/Odin-Rounded-Bold.otf'); /*URL to font*/
+}
+
+
+hr {clear: both;}
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("http://www.liovinci.com/i/img/liovinci-loading-web.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*/////////////// MENU ///////////////*/
+
+
+.menu-color {
+    background: #0e90d8 !important; /* For browsers that do not support gradients */    
+   text-align: center;
+}
+
+.navbar {
+    background: #0069AA;
+    border: 0 !important; 
+}
+/* NOTE used in sidebar too */
+.logo-resize {
+      visibility: visible;
+    position: absolute;
+    top: 5px;
+    width: 70px;
+    max-width: 200% !important;
+}
+#lv-home {
+
+}
+/* FOR CENTERING LOGO
+.navbar {
+    position: relative;
+}
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -55px !important;  /* 50% of your logo width 
+    display: block;
+    margin-top: 10px;
+}*/
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff !important;
+}
+
+.brand {
+  font-family: 'liovinci-logo';
+  font-size: 26px !important;
+  color: #ffffff !important;
+}
+
+
+.menu-item-color {
+  color: #ffffff !important;
+  font-family: 'lato-bold';
+  font-size: 16px !important;
+}
+
+.menu-item-color:hover {
+  border: 2px solid #ffffff;;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/*@media (max-width: 768px) {
+.brand {
+    margin-left: 20px !important;
+}*/
+
+.home-color {
+  margin-left: 10px;
+  margin-top: 30px;
+  line-height: 35px;
+width: 100px;
+}
+.navbar-home {
+  margin-left: 100px !important;
+}
+}
+/*///////////////END SIDEBAR MENU ///////////////*/
+
+
+/*///////////////BEGIN FOOTER ///////////////*/
+
+/* this is to push the phase div above the fixed bottom bar*/
+#container-footer {
+    position: fixed;
+  width: 100%;
+  bottom: -20px;
+}
+.footer {
+    height: 110px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.footer-download {
+
+    font-size: 14px;
+    font-family: 'lato-regular';
+}
+.top-footer {
+  display: inline-block;
+    margin-top: 15px;
+}
+
+.heart-color {
+
+    color: #ff0000;
+}
+
+.appstore {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.store{
+    height: auto; 
+    width: auto; 
+    max-width: 99px; 
+    max-height: 34px;
+}
+/*///////////////END FOOTER ///////////////*/
+
+
+/*///////////////BEGIN IMAGE ///////////////*/
+
+#container-image {
+    margin-top: 80px;
+}
+
+.carousel-control {
+    background: #0e90d8 !important; /* For browsers that do not support gradients */    
+      
+}
+
+.carousel-img {
+  border: .8px solid #f7f7f7;;
+}
+
+
+@media (max-width: 700px) {
+
+    .carousel{
+      width: 336px; 
+      margin: 0 auto;
+    }
+
+    .carousel-inner {
+      margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 256px; 
+        max-height: 192px;
+    }
+
+    /* pushes div below image to move the indicators  320 - 256 -
+   */
+    #carousel-project {
+        height: 242px;
+        overflow: visible;
+    }
+
+    /* centers carousel controllers */
+    .carousel-control img{
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 40px !important;
+        max-height: 150px;
+    }
+    .carousel-control {
+        height: 150px;
+        width: 40px !important;
+        margin-top: 23px; /*-half of diff of height from height  of #carousel-project*/
+
+    }
+
+ 
+
+} 
+
+
+/* for bigger screens */
+@media (min-width: 701px) {
+ .carousel{
+      width: 650px; 
+      margin: 0 auto;
+    }
+
+    .carousel-inner {
+      margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 490px; 
+        max-height: 367px !important;
+    }
+
+    /* pushes div below image to move the indicators     */
+    #carousel-project {
+        width: 650px;
+        height: 440px;
+        overflow: visible;
+    }
+
+    /* centers carousel controllers */
+    .carousel-control img{
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 80px !important;
+        max-height: 300px;
+    }
+    .carousel-control {
+        width: 80px !important;
+        height: 300px;
+        margin-top: 30px;
+
+    }
+
+}
+
+
+.carousel-indicators li {
+  background-color: #999 !important;
+  background-color: rgba(70,70,70,.45) !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+
+}
+
+.carousel-indicators .active {
+  background-color: #0e90d8 !important;
+}
+
+
+
+
+/*///////////////END IMAGE ///////////////*/
+
+
+/*///////////////START PROJECT DETAILS ///////////////*/
+
+#company-site{
+  font-family: 'lato-regular';
+  font-size: 16px;
+}
+
+.verified {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* for bigger screens */
+@media (max-width: 700px) {
+    #container-project-details {
+        margin-top: -90px;
+        background-color: #f7f7f7;
+    }
+
+    #project-details {
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 364px; 
+    }
+
+    .details-line {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #d8d8d8; /* old IE */
+    background-color: #d8d8d8; /* Modern Browsers */
+    width: 364px;
+}
+
+
+#project-title {
+    margin-top: 60px;
+    font-size: 25px;
+    font-family: 'lato-bold';
+    color: #545454
+}
+
+}
+
+/* for bigger screens */
+@media (min-width: 701px) {
+    #container-project-details {
+        margin-top: -130px;
+        background-color: #f7f7f7;
+    }
+
+    #project-details {
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width: 500px; 
+    }
+    .details-line {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #d8d8d8; /* old IE */
+    background-color: #d8d8d8; /* Modern Browsers */
+    width: 500px;
+}
+
+
+#project-title {
+    margin-top: 100px;
+    font-size: 25px;
+    font-family: 'lato-bold';
+    color: #545454
+}
+
+}
+
+
+
+
+#project-company {
+    margin-top: -5px;
+    font-size: 18px;
+    font-family: 'lato-italic';
+    color: #8c8c8c
+}
+
+#project-description {
+    margin-top: -5px;
+    font-size: 14px;
+    font-family: 'lato-regular';
+    color: #8c8c8c
+}
+
+
+.project-field-date {
+ font-size: 14px;
+    font-family: 'lato-bold';
+    color: #868686
+}
+
+.project-date {
+    margin-left: 5px;
+     font-size: 14px;
+    font-family: 'lato-bold';
+    color: #b9b8b8
+}
+
+
+.share-text {
+    color: #b9b8b8;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.share-text-view {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+
+/*///////////////END PROJECT DETAILS ///////////////*/
+
+
+
+/*///////////////START PROJECT HASHTAGS ///////////////*/
+
+
+
+
+/* for smaller screens */
+@media (max-width: 700px) {
+   #project-hashtags {
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width:  364px; 
+    }
+
+
+}
+
+/* for bigger screens */
+@media (min-width: 701px) {
+   
+    #project-hashtags {
+        margin: 0 auto;
+        height: auto; 
+        width: auto; 
+        max-width:  500px; 
+    }
+
+}
+
+#hashtag-field {
+    font-size: 12px;
+    font-family: 'lato-bold';
+    color: #c3c3c3
+}
+.hashtag {
+  background-color: #ffffff;
+    margin-right: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 16px; /* change to a higher px to make more round */
+    float: left;
+    border: .8px solid #bfbfbf;
+    font-size: 14px;
+    font-family: 'lato-regular';
+    color: #969696
+}
+
+
+/*///////////////END PROJECT HASHTAGS ///////////////*/
+
+
+
+
+
+/*///////////////BEGIN TO TOP ///////////////*/
+
+
+
+/* 2.12 To Top Button */
+#container-to-top {
+    clear: both;
+}
+#to-top {
+
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 120px;
+    margin-right: 30px;
+    z-index: 1;
+    padding: 9px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.75s;
+    transition: 0.75s;
+}
+
+#to-top:hover {
+    background: #19a9e5;
+}
+
+
+/*///////////////END TO TOP ///////////////*/
+
+
+
+
+
+/*///////////////BEGIN IMAGE MODAL ///////////////*/
+
+@media (max-width: 701px) {
+.modal-size {
+    width: 300px;
+    height: 300px;
+}
+
+.modal-content {
+    background-color: rgb(11, 80, 127) !important; /* Fall-back for browsers that don't
+                                    support rgba */
+    background-color: rgba(11, 80, 127, .5) !important;
+   width: 300px !important;
+    margin: 0 auto;
+}
+
+}
+
+@media (min-width: 701px) {
+.modal-size {
+    width: 512px;
+    height: 512px;
+}
+
+.modal-content {
+    background-color: rgb(11, 80, 127) !important; /* Fall-back for browsers that don't
+                                    support rgba */
+    background-color: rgba(11, 80, 127, .5) !important;
+   width: 512px !important;
+    margin: 0 auto;
+}
+
+}
+
+.modal-dialog {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.modal-header {
+    border: none !important;
+    height: 1px !important;
+}
+.close {
+    margin-right: 20px;
+    color: #fff !important;
+    opacity: 0.5 !important;
+}
+
+.close:hover {
+    opacity: 1.0 !important;
+}
+
+
+/*///////////////END IMAGE MODAL ///////////////*/
+
+.resize-lock {
+  margin: 0 auto;
+  width: 40px;
+}
+
+.no-phase-title { 
+  margin-top: 0px;
+    font-size: 20px !important;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+ }
+
+.phase-pic {
+  border: solid 1px #959595;
+  border-radius: 35px;
+
+}
+.phase-title {
+    margin-top: 0px;
+    font-size: 30px !important;
+    font-family: 'lato-bold';
+    color: #6c6c6c;
+    clear:both;
+}
+
+.phase-text {
+    font-size: 20px !important;    
+    font-family: 'lato-regular';
+    color: #6a6a6a;
+}
+
+.phase-date {
+    font-size: 16px !important;
+    font-family: 'lato-bold';
+    color: #7d7d7d;
+}
+/* -------------------------------- 
+
+Primary style TIMELINE
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+.no-source-line:hover{
+  text-decoration:none;
+}
+
+.no-source-line:link{
+  text-decoration:none;
+}
+
+.no-source-line:visited{
+  text-decoration:none;
+}
+
+.no-source-line:active{
+  text-decoration:none;
+}
+
+
+
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #d7e4ed;
+}
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  /*height: 40px; REMOVED looks cooler */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+/* can make cd-left, or anything these are just showing different for each one */
+.cd-timeline-img.cd-left {
+  background: #0e90d8;
+}
+.cd-timeline-img.cd-right {
+  background: #00c0f0;
+}
+.cd-timeline-img.cd-location {
+  background: #f0ca45;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 60px;
+    /*height: 60px; REMOVED looks cooler */
+    left: 50%;
+    margin-left: -30px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .cssanimations .cd-timeline-img.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .cd-timeline-img.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-1 0.6s;
+    -moz-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s;
+  }
+}
+
+@-webkit-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: #ffffff;
+  border-radius: 0.25em;
+  padding: 1em;
+  border: solid 0.2px #cacaca;
+}
+.cd-timeline-content::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cd-timeline-content h2 {
+  margin-bottom: -15px;
+  color: #303e49;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+.cd-timeline-content .cd-read-more {
+  float: right;
+  padding: .8em 1em;
+  background: #acb7c0;
+  color: #ffffff;
+  border-radius: 0.25em;
+}
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb;
+}
+.cd-timeline-content .cd-date {
+  float: left;
+  /*padding: .8em 0; REMOVED so goes to top*/
+  opacity: .7;
+}
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0px; /* CHANGED TO 0 from 16 SO I CAN HAVE IT POSTION UP TOP */
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #cacaca;
+}
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+  }
+  .cd-timeline-content::before {
+    top: 0px; /* CHANGED TO 0 from 24 SO I CAN HAVE IT POSTION UP TOP */
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #cacaca;;
+  }
+  .cd-timeline-content .cd-read-more {
+    float: left;
+  }
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 0px;/*changed from 6 to 0 so goes to top*/
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 0px; /* CHANGED TO 0 from 24 SO I CAN HAVE IT POSTION UP TOP */
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #cacaca;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+  .cssanimations .cd-timeline-content.is-hidden {
+    visibility: hidden;
+  }
+  .cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-2 0.6s;
+    -moz-animation: cd-bounce-2 0.6s;
+    animation: cd-bounce-2 0.6s;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    -webkit-animation: cd-bounce-2-inverse 0.6s;
+    -moz-animation: cd-bounce-2-inverse 0.6s;
+    animation: cd-bounce-2-inverse 0.6s;
+  }
+}
+@-webkit-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px);
+  }
+  100% {
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
