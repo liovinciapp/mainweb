@@ -5896,7 +5896,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 10px !important; }
 
 #iPhone {
-  zoom: 0.73;
+  zoom: 0.62;
   display: flex !important;
   margin: auto !important; }
 
@@ -6061,7 +6061,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-top: 4em;
   padding-bottom: 4em;
-  height: 900px;
+  height: 775px;
   z-index: 10;
   background: #0E90D8;
   overflow: hidden; }
@@ -6069,10 +6069,10 @@ h1, h2, h3, h4, h5, h6 {
     #fh5co-hero {
       padding-top: 2em;
       padding-bottom: 2em;
-      height: 1300px !important; } }
+      height: 1200px !important; } }
   @media screen and (max-width: 992px) {
     #fh5co-hero {
-      height: 1200px; } }
+      height: 1100px; } }
   #fh5co-hero .fh5co-intro {
     width: 100%;
     color: #fff;
