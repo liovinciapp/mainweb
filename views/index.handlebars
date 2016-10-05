@@ -77,20 +77,20 @@
 
   <div id="fh5co-offcanvass">
     <ul>
-      <li class="active"><a href="#" data-nav-section="home">Home</a></li>
-      <li><a href="#" data-nav-section="about">Company</a></li>
+      <li class="active"><a href="#" data-nav-section="home" onclick="ga('send','event','navigation','/home')">Home</a></li>
+      <li><a href="#" data-nav-section="about" onclick="ga('send','event','navigation','/about')">Company</a></li>
       <!--<li><a href="#" data-nav-section="design">Design</a></li>
       <li><a href="#" data-nav-section="testimonies">Testimonies</a></li>
       <li><a href="#" data-nav-section="products">Products</a></li>
       <li><a href="#" data-nav-section="benefits">Benefits</a></li>
       <li><a href="#" data-nav-section="pricing">Pricing</a></li> -->
-      <li><a href="#" data-nav-section="faqs">FAQs</a></li>
+      <li><a href="#" data-nav-section="faqs" onclick="ga('send','event','navigation','/faq')">FAQs</a></li>
     </ul>
     <h3 class="fh5co-lead">Connect with us</h3>
     <p class="fh5co-social-icons">
-      <a href="https://twitter.com/liovincis" target="_blank"><i class="icon-twitter"></i></a>
-      <a href="https://www.facebook.com/liovinci" target="_blank"><i class="icon-facebook"></i></a>
-      <a href="https://www.instagram.com/liovincis/" target="_blank"><i class="icon-instagram"></i></a>
+      <a href="https://twitter.com/liovincis" target="_blank"><i class="icon-twitter" onclick="ga('send','event','social','/twittermenu')"></i></a>
+      <a href="https://www.facebook.com/liovinci" target="_blank"><i class="icon-facebook" onclick="ga('send','event','social','/facebookmenu')"></i></a>
+      <a href="https://www.instagram.com/liovincis/" target="_blank" onclick="ga('send','event','social','/instagrammenu')"><i class="icon-instagram"></i></a>
     </p>
   </div>
 
@@ -116,10 +116,10 @@
               <div class="col-md-6 fh5co-text">
                 <h2 id="appTitle" class="to-animate intro-animate-1">liovinci</h2>
                 <p class="to-animate intro-animate-2">Experience products like never before.</p>
-                <p><div class="fb-like to-animate intro-animate-3" data-href="https://www.facebook.com/liovinci" data-width="400px" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true" data-colorscheme="dark"></div></p>
+                <p><div class="fb-like to-animate intro-animate-3" data-href="https://www.facebook.com/liovinci" data-width="400px" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true" data-colorscheme="dark" onclick="ga('send','event','social','/fblike')"></div></p>
                 <p class="to-animate intro-animate-4" id="mobileDownload">
-                  <a href="https://itunes.apple.com/us/app/liovinci/id1088105850" target="_blank"><img class="appStoreButtons" src="/main-i/images/app-store-badge.svg" alt=""></a>
-                  <a href="https://play.google.com/store/apps/details?id=com.liovinci.liovinci" target="_blank"><img class="appStoreButtons" src="/main-i/images/google-play-badge.png" alt=""></a>
+                  <a href="https://itunes.apple.com/us/app/liovinci/id1088105850" target="_blank" onclick="ga('send','event','appstore','/appleappstorebtn')"><img class="appStoreButtons" src="/main-i/images/app-store-badge.svg" alt=""></a>
+                  <a href="https://play.google.com/store/apps/details?id=com.liovinci.liovinci" target="_blank" onclick="ga('send','event','appstore','/googleplaybtn')"><img class="appStoreButtons" src="/main-i/images/google-play-badge.png" alt=""></a>
                   <!-- <div id="fbContainer" class="to-animate intro-animate-4">
                   </div> -->
                 </p>
@@ -153,16 +153,16 @@
           <div class="container">
             <div class="row text-center">
               <div class="col-md-3 col-sm-6 col-xs-6 to-animate">
-                <a href="http://www.moley.com/" target="_blank" rel="nofollow"><figure class="fh5co-client"><img src="/main-i/images/MoleyLogo.png" alt="Moley Robotics"></figure></a>
+                <a href="http://www.moley.com/" target="_blank" rel="nofollow" onclick="ga('send','event','company','/moley')"><figure class="fh5co-client"><img src="/main-i/images/MoleyLogo.png" alt="Moley Robotics"></figure></a>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-6 to-animate">
-                <a href="http://www.ivo.hk/" target="_blank" rel="nofollow"><figure class="fh5co-client"><img src="/main-i/images/MoodboxLogo.png" alt="Moodbox"></figure></a>
+                <a href="http://www.ivo.hk/" target="_blank" rel="nofollow" onclick="ga('send','event','company','/moodbox')"><figure class="fh5co-client"><img src="/main-i/images/MoodboxLogo.png" alt="Moodbox"></figure></a>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-6 to-animate">
-                <a href="https://www.starship.xyz/" target="_blank" rel="nofollow"><figure class="fh5co-client"><img src="/main-i/images/StarshipLogo.png" alt="Starship"></figure></a>
+                <a href="https://www.starship.xyz/" target="_blank" rel="nofollow" onclick="ga('send','event','company','/starship')"><figure class="fh5co-client"><img src="/main-i/images/StarshipLogo.png" alt="Starship"></figure></a>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-6 to-animate">
-                <a href="https://thevoid.com" target="_blank" rel="nofollow"><figure class="fh5co-client"><img src="/main-i/images/TheVoidLogo.png" alt="The Void"></figure></a>
+                <a href="https://thevoid.com" target="_blank" rel="nofollow" onclick="ga('send','event','company','/thevoid')"><figure class="fh5co-client"><img src="/main-i/images/TheVoidLogo.png" alt="The Void"></figure></a>
               </div>
             </div>
           </div>
@@ -571,14 +571,14 @@
 
 
           <div class="container">
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq1')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>Why should i use liovinci?</h3>
               <div class="faq-body">
                 <p>liovinci is the place to discover and follow new products, so you can receive new updates without having to hunt for it yourself.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq2')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>How do I get started?</h3>
               <div class="faq-body">
@@ -588,79 +588,79 @@
                 <p>Next, explore and track some products. Comment and join the discussion. Follow and connect with other users.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq3')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>How do I find and follow other users?</h3>
               <div class="faq-body">
                 <p>Search for their usernames, go to your profile -> settings -> find facebook friends, or invite them to the app and tell them to find you. Then, click and follow.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq4')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>How to find products?</h3>
               <div class="faq-body">
                 <p>You can select products from the news feed, explore products, filter by categories, search by tags, or see what your friends are tracking.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq5')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>What is the news menu item?</h3>
               <div class="faq-body">
                 <p>News shows you the latest updates added into our system, so users can browse products that have been recently updated.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq6')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>How to receive updates?</h3>
               <div class="faq-body">
                 <p>Once you track a product you will receive push notifications as new updates are added.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq7')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>Where do you get your information and updates from?</h3>
               <div class="faq-body">
                 <p>We use numerous trusted sources, from other news outlets or from companies themselves.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq8')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>What if I do not see a product or project that I want to track in the app?</h3>
               <div class="faq-body">
                 <p>You can search for it, if you cannot find it, then you can add the project directly from the app. One of our moderators will then add it as quickly as possible into our system so you can then find it in the app the next day.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq9')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>How can I join a discussion?</h3>
               <div class="faq-body">
                 <p>All projects have a comments icon, which will take you to the comment screen allowing you to write your thoughts and include a reaction that identifies with what you have to say.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq10')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>How can I contribute?</h3>
               <div class="faq-body">
                 <p>We are allowing moderators to join, feel free to sign up or email us at mods@liovinci.com for more information.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq11')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>What was the inspiration for the app's name (liovinci)?</h3>
               <div class="faq-body">
                 <p>liovinci was based off of Leonardo Da Vinci's name. A thinker, innovator, and creator of things; a good representative of our users. Companies who create cool new products, users who are early adopters and start thought provoking discussions.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq12')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
               <h3>Why can't I sign in/login in via website?</h3>
               <div class="faq-body">
                 <p>Currently, we do not have a website platform, but we do plan on implementing it possibly in the future.</p>
               </div>
             </div>
-            <div class="faq-accordion to-animate">
+            <div class="faq-accordion to-animate" onclick="ga('send','event','faq','/faq13')">
               <span class="faq-accordion-icon-toggle"><i class="icon-arrow-down"></i></span>
-              <h3>How to reset my password?</h3>
+              <h3>How do I reset my password?</h3>
               <div class="faq-body">
                 <p>You can visit our forgot my password page on login from the app itself or visit <a href="http://liovinci.com/forgotpassword"> forgot password here.</a></p>
               </div>
@@ -691,7 +691,7 @@
                 </div>
                 <div class="col-md-3 col-sm-3">
                   <div class="form-group">
-                    <input id="modFormSubmit" class="btn btn-primary" value="Send">
+                    <input id="modFormSubmit" class="btn btn-primary" value="Send" onclick="ga('send','event','mods','/contribute')">
                   </div>
                 </div>
               </form>
@@ -716,16 +716,16 @@
                 <!-- <li><a href="#">Jobs</a></li> -->
                 <!-- <li><a href="#">Blog</a></li> -->
                 <!-- <li><a href="#">New Features</a></li> -->
-                <li><a href="mailto:support@liovinci.com">Contact Us</a></li>
+                <li><a href="mailto:support@liovinci.com" onclick="ga('send','event','contact','/mailto')">>Contact Us</a></li>
               </ul>
             </div>
             <div class="col-md-3 col-sm-4 col-md-push-3">
               <h3 class="fh5co-lead">Support</h3>
               <ul>
                 <!-- <li><a href="#">Help Center</a></li> -->
-                <li><a href="http://www.liovinci.com/terms" target="_blank">Terms of Service</a></li>
+                <li><a href="http://www.liovinci.com/terms" target="_blank"onclick="ga('send','event','legal','/terms')">Terms of Service</a></li>
                 <!-- <li><a href="#">Security</a></li> -->
-                <li><a href="http://www.liovinci.com/privacypolicy" target="_blank">Privacy Policy</a></li>
+                <li><a href="http://www.liovinci.com/privacypolicy" target="_blank" onclick="ga('send','event','legal','/privacy')">Privacy Policy</a></li>
                 <!-- <li><a href="#">Careers</a></li>
                 <li><a href="#">More Apps</a></li> -->
               </ul>
@@ -733,7 +733,7 @@
             <div class="col-md-3 col-sm-4 col-md-push-3">
               <h3 class="fh5co-lead">More Links</h3>
               <ul>
-                <li><a href="https://www.youtube.com/watch?v=5e3Nfy0vN50" target="_blank">Explainer Video</a></li>
+                <li><a href="https://www.youtube.com/watch?v=5e3Nfy0vN50" target="_blank" onclick="ga('send','event','video','/youtube')">>Explainer Video</a></li>
                 <!-- <li><a href="https://liovinci.com/projects">Projects</a></li>
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">Privacy Policy</a></li>
@@ -743,12 +743,12 @@
             </div>
 
             <div class="col-md-3 col-sm-12 col-md-pull-9">
-              <div class="fh5co-footer-logo"><a href="https://wwww.liovinci.com">liovinci</a></div>
+              <div class="fh5co-footer-logo"><a href="https://wwww.liovinci.com" onclick="ga('send','event','home','/bottomLogo')">liovinci</a></div>
               <p class="fh5co-copyright"><small>&copy; 2016. All Rights Reserved.</small></p>
               <p class="fh5co-social-icons">
-                <a href="https://twitter.com/liovincis" target="_blank"><i class="icon-twitter"></i></a>
-                <a href="https://www.facebook.com/liovinci" target="_blank"><i class="icon-facebook"></i></a>
-                <a href="https://www.instagram.com/liovincis" target="_blank"><i class="icon-instagram"></i></a>
+                <a href="https://twitter.com/liovincis" target="_blank" onclick="ga('send','event','social','/twitter')"><i class="icon-twitter"></i></a>
+                <a href="https://www.facebook.com/liovinci" target="_blank"onclick="ga('send','event','social','/facebook')"><i class="icon-facebook"></i></a>
+                <a href="https://www.instagram.com/liovincis" target="_blank" onclick="ga('send','event','social','/instagram')"><i class="icon-instagram"></i></a>
               </p>
             </div>
 
@@ -757,7 +757,6 @@
       </div>
     </footer>
   </div>
-
   <!-- Facebook -->
   <script>
   window.fbAsyncInit = function() {
@@ -828,7 +827,16 @@
   <!-- Main JS -->
   <script src="/main-i/js/main.js"></script>
 
-
+ <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5216d2b824b31295"></script>
+    <!-- Begin Urips Analytics Code-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-77712847-1', 'auto');
+      ga('send', 'pageview');
+    </script>
 
 
   </body>
